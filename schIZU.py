@@ -5,7 +5,7 @@ for line in contents.split('\n')[12:16]: # mmm tasty unformatted data
     states_rating.append([float(num) for num in re.findall(r'[-+]?\d*\.\d+|[-+]?\d+', line)])
 path = [int(num) for num in re.findall(r'stavy\s+(.*)\n', contents)[0].split()] # Limst compremhemsiom
 alpha, gamma = float(re.findall(r'alpha=([\d.]+)', contents)[0]), float(re.findall(r'gamma=([\d.]+)', contents)[0]) # Funny Greek letters
-for i in range(len(path) - 1):
+for i in range(len(path)-1):
     curr_state, next_state = path[i], path[i+1]
     reward = 0 # YOU
     # THE GUY SHE TELLS YOU NOT TO WORRY ABOUT :fuckingcryingrollinggrinninglaughingemojitimesfuckingtendude:
