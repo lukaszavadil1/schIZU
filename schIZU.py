@@ -1,5 +1,6 @@
 import re, sys # Essentials <3
 contents = sys.stdin.read() # mmm unformatted chunk of data
+sys.stdout.write(contents + 3 * '\n')
 states_rating = []
 # Limst compremhemsioms
 [states_rating.append([float(num) for num in re.findall(r'[-+]?\d*\.\d+|[-+]?\d+', line)]) for line in contents.split('\n')[12:16]]
